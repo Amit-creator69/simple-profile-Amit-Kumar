@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #a24545;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            font-size: 24px;
+        }
+        .nav {
+            background: #444;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            display: inline-block;
+        }
+        .nav a:hover {
+            background: #666;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .profile {
+            text-align: center;
+        }
+
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #666;
+            min-width: 150px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background: #777;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+       
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .about, .skills, .contact, .social {
+            margin-top: 20px;
+        }
+        .about {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        .skills {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        .skills span {
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .contact {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        .social {
+            text-align: center;
+        }
+        .social a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            display: inline-block;
+        }
+        .social a img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Amit jha's Profile</div>
+    <div class="nav">
+        <a href="#about">About Us</a>
+        <a href="#skills">Skills</a>
+        <div class="dropdown">
+            <a href="#">Work</a>
+            <div class="dropdown-content">
+                <a href="./gallery.html">Gallery</a>
+                <a href="./contactus.html">form</a>
+                <a href="./menu.html">Menu</a>
+            </div>
+        <a href="./contactus.html">Contact Us</a>
+        <a href="#social">Social Media</a>
+    </div>
+    <div class="container">
+        <div class="profile">
+            <img src="./img/png.png" alt="Profile Picture">
+            <h2>Amit Kumar</h2>
+            <p>Web Developer passionate about creating beautiful and functional websites.</p>
+        </div>
+        <div class="about" id="about">
+            <h3>About Us</h3>
+            <p>We are a team of dedicated professionals passionate about web development and design. Our goal is to create visually appealing and highly functional digital experiences. We specialize in front-end and back-end technologies, ensuring that our clients receive top-tier solutions tailored to their needs.</p>
+        </div>
+        <div class="skills" id="skills">
+            <h3>Skills</h3>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Figma</span>
+            <span>Video Editing</span>
+            <span>Video Gaming</span>
+            <span>UI/UX Design</span>
+        </div>
+        <div class="contact" id="contact">
+            <h3>Contact Us</h3>
+            <p>Email: amitkumar@example.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Location: New Delhi, India</p>
+        </div>
+        <div class="social" id="social">
+            <h3>Follow Me</h3>
+            <a href="#" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"> Twitter</a>
+            <a href="#" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"> LinkedIn</a>
+            <a href="#" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub"> GitHub</a>
+        </div>
+    </div>
+</body>
+</html>

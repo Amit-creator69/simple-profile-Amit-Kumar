@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu & Order List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+
+        .header {
+            background-color: #a24545;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            font-size: 24px;
+        }
+        .nav {
+            background: #444;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            display: inline-block;
+        }
+        .nav a:hover {
+            background: #666;
+            border-radius: 5px;
+        }
+
+        .menu-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .menu-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        th {
+            background: #007BFF;
+            color: white;
+        }
+
+        td:hover {
+            background: red;
+            color: white;
+        }
+
+        .order-button, .home-button {
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .order-button:hover, .home-button:hover {
+            background: #218838;
+        }
+
+        .category {
+            background: #f0f0f0;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .menu-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Amit Jha's Profile</div>
+    <div class="nav">
+        <a href="#about">About Us</a>
+        <a href="#skills">Skills</a>
+        <a href="#">Work</a>
+        <a href="./contactus.html">Contact Us</a>
+        <a href="#social">Social Media</a>
+    </div>
+
+    <div class="menu-container">
+        <h2>Our Menu</h2>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Price (INR)</th>
+            </tr>
+            <tr class="category"><td colspan="2">Fast Food</td></tr>
+            <tr><td>Pizza</td><td>₹800</td></tr>
+            <tr><td>Burger</td><td>₹400</td></tr>
+            <tr><td>Pasta</td><td>₹560</td></tr>
+            <tr><td>Sandwich</td><td>₹480</td></tr>
+            <tr><td>French Fries</td><td>₹320</td></tr>
+            <tr><td>Hot Dog</td><td>₹400</td></tr>
+            
+            <tr class="category"><td colspan="2">Beverages</td></tr>
+            <tr><td>Coffee</td><td>₹240</td></tr>
+            <tr><td>Juice</td><td>₹400</td></tr>
+            <tr><td>Milkshake</td><td>₹400</td></tr>
+            <tr><td>Tea</td><td>₹160</td></tr>
+            <tr><td>Smoothie</td><td>₹480</td></tr>
+
+            <tr class="category"><td colspan="2">Main Course</td></tr>
+            <tr><td>Steak</td><td>₹1200</td></tr>
+            <tr><td>Sushi</td><td>₹960</td></tr>
+            <tr><td>Grilled Chicken</td><td>₹720</td></tr>
+            <tr><td>BBQ Ribs</td><td>₹1120</td></tr>
+            <tr><td>Fried Rice</td><td>₹640</td></tr>
+            <tr><td>Soup</td><td>₹480</td></tr>
+            <tr><td>Tacos</td><td>₹560</td></tr>
+            
+            <tr class="category"><td colspan="2">Paneer Dishes</td></tr>
+            <tr><td>Paneer Butter Masala</td><td>₹800</td></tr>
+            <tr><td>Shahi Paneer</td><td>₹960</td></tr>
+            <tr><td>Paneer Tikka</td><td>₹880</td></tr>
+            <tr><td>Chilli Paneer</td><td>₹720</td></tr>
+            <tr><td>Kadai Paneer</td><td>₹800</td></tr>
+            <tr><td>Paneer Bhurji</td><td>₹640</td></tr>
+            <tr><td>Paneer Kofta</td><td>₹1040</td></tr>
+        </table>
+        <button class="order-button">Order Now</button>
+        <button class="home-button" onclick="window.location.href='index.html'">Go to Home</button>
+    </div>
+</body>
+</html>
