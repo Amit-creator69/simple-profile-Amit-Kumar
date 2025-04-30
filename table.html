@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Table Generator</title>
+    <style>
+        body {
+            background-color: red;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+            padding: 20px;
+        }
+        .table-box {
+            background-color: black;
+            margin: 20px auto;
+            padding: 10px;
+            width: fit-content;
+            border-radius: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 300px;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Enter a Number to Generate its Table (1 to 10,000)</h2>
+<!-- Input box to enter the number -->
+<input type="number" id="tableInput" placeholder="Enter a number (1-10000)" min="1" max="10000">
+<button onclick="generateTable()">Show Table</button>
+
+<div id="tablesContainer"></div>
+
+<script>
+    function createTable(number) {
+        let html = "<div class='table-box'><table>";
+        html += "<tr><th colspan='2'>Table of " + number + "</th></tr>";
+
+        // Generate the multiplication table
+        for (let i = 1; i <= 10; i++)
+         {
+            html += "<tr><td>" + number + " × " + i + "</td><td>" + (number * i) + "</td></tr>";
+        }
+
+        html += "</table></div>";
+        return html;
+    }
+
+    function generateTable()
+     {
+        const num = document.getElementById("tableInput").value;
+
+        // Check if input is empty or invalid
+        if (num === "" || num < 1 || num > 10000) 
+        {
+            alert("Please enter a valid number between 1 and 10,000!");
+            return;
+        }
+        
+        // Generate and display the table
+        document.getElementById("tablesContainer").innerHTML = createTable(num);
+    }
+</script>
+
+</body>
+</html>
