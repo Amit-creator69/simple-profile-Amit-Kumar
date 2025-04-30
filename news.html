@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Loop</title>
+    <style>
+        body {
+            background-color: red;
+        }
+        #newsBox 
+        {
+            font-size: 24px;
+            padding: 20px;
+            border: 2px solid black;
+            width: 400px;
+            margin: 50px auto;
+            text-align: center;
+            background-color: black; 
+            /* Box ka background black */
+            color: white;            
+             /* Text white */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="newsBox">Loading News...</div>
+
+<script>
+    const newsHeadlines = [
+        "Breaking: New technology launched today!",
+        "Sports: Team A wins the championship!",
+        "Weather: Expect heavy rain tomorrow.",
+        "Finance: Market hits an all-time high.",
+        "Entertainment: New movie breaks records!"
+    ];
+
+    let index = 0;
+
+    function showNews() {
+        document.getElementById("newsBox").innerText = newsHeadlines[index];
+        index = (index + 1) % newsHeadlines.length;
+    }
+
+    setInterval(showNews, 3000);
+    showNews();
+</script>
+
+</body>
+</html>
