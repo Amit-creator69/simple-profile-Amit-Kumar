@@ -5,7 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<style>
+    #logo {
+        color:rgb(red, rgb(139, 226, 139), blue);
+        font-size: 40px;
+        width: 30px padding:10px;
+        background: rgb( 0,0,0);
+        cursor:pointer; 
+    
+    }
+    .pic {
+        width:50%
+        box-shadow:10px 10px 10px gray;
+    }
+</style>
+
 <body>
-    amit tumm bhot age jaoge
+   <h1>working jquery...</h1> 
+   <img id="pic" src="images/p1.jpg.jpg" class="pic">
+   <div id="logo">LOGO</div>
+
+   <ol>
+    <li>HOME</a></li>
+    <li><a href="#"></a></li>
+
+    <li> service</a></li>
+
+<li><a href="#">About</a></li>
+
+
+   </ol>
+   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur facere labore est asperiores dolor nostrum sunt, ab enim nobis, commodi nihil repellat minima amet odio saepe aliquam rem minus.</p>
+
+
+   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse repellat, autem, voluptates neque facilis cupiditate optio adipisci vero ad eos in at ipsum sapiente dolor maxime voluptate quasi architecto cum?</p>
+
+   <script>
+    $(document).ready(function(){
+        selector in jQuery
+        //$("*").hide(4000)
+         //$(".pic").hide(4000)
+          //$(".pic").hide("slow")
+          // $(".pic").hide("fast")
+           // $("#logo").hide(4000)
+            // $("p").hide(1000)
+            // $("p:first").hide(1000)
+            // $("p.intro")
+            // $("ol li:first").hide(1000)
+            // $("ol li:first-child")
+$("logo").click(function()
+    {
+        //$("#pic").hide(1000)
+        $("#pic").tpggle(1000)
+    }
+
+   </script>
 </body>
+
 </html>
