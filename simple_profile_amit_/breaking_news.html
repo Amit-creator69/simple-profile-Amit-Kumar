@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auto News Banner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .news-banner {
+      background-color: #004080;
+      color: white;
+      padding: 40px 60px;
+      width: 90%;
+      max-width: 70%;
+      border-radius: 100px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+      position: relative;
+      font-size: 5.2rem;
+    }
+
+    .news-text {
+      transition: opacity 0.3s ease;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="news-banner">
+  <div class="news-text" id="newsText">Loading news...</div>
+</div>
+
+<script>
+  const newsItems = [
+    "🚨 Breaking: Major storm hits coastal city, residents evacuated!",
+    "📢 Govt announces new education policy for rural areas.",
+    "⚽ Sports: India wins the semi-final in dramatic fashion!",
+    "💼 Tech: Major startup raises $100M in Series B funding.",
+    "🌍 Environment: Forest cover increases by 2% this year."
+  ];
+
+  let currentIndex = 0;
+  const newsText = document.getElementById("newsText");
+
+  function updateNews() {
+    newsText.style.opacity = 0;
+    setTimeout(() => {
+      newsText.textContent = newsItems[currentIndex];
+      newsText.style.opacity = 1;
+      currentIndex = (currentIndex + 1) % newsItems.length;
+    }, 200); // fade out before changing
+  }
+
+  setInterval(updateNews, 500);
+  updateNews(); // initial call
+</script>
+
+</body>
+</html>
